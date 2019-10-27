@@ -1,27 +1,7 @@
 # VocabularyTest
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
+Write an Application that lets the user manage vocabulary for a foreign language to be learned. It consists of a Form where the user can insert two words, one for the native language (let's say English) and one for the foreign language (let's say German). The vocabulary pairs are appended to a List and can be deleted.
 
-## Development server
+At any time the user can start a Test mode (add a button next to the list for it) which randomly chooses 20 words from the List in a random order. The Test mode then only shows one word at a time together with an input field where the user needs to insert the translated word. Submitting the translated word then shows the next word. The progress in the Test is indicated through a progress bar on top of the Test view. If no word is left, the Application will go to the Result view.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+When the Test is finished, the Application calculates the results (hit ratio) and renders a Result view that shows the percentage of hits and a table showing all tested words together with the translation and the user input. Every row should have a visual indication if the word was a hit or a miss. With a Back button the user can return to the List.
