@@ -1,0 +1,29 @@
+.result-component{ 
+    background-image: url(/assets/img/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    .question-container{
+        margin: 0 auto;
+        padding:20px; 
+        @media only screen and (max-width:767px){
+            width: 100%;
+        }
+        @media only screen and (min-width:768px){
+            width: 50%;
+        }
+    }
+    .ratio-container{
+        background: white;
+        margin-bottom: 20px;
+        min-height: 44px;
+        button{
+            float: right;
+        }
+    }
+    table{
+        width: 100%;
+    }
+
+}
+
+

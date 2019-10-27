@@ -1,0 +1,39 @@
+<div class="result-component w-100">
+        <div class="question-container">
+            <div class="ratio-container">
+                <h4 [ngStyle]="{'float': 'left', 'margin' : '5px 10px'}">Hit Ratio: {{hitRatio}}%</h4>
+                <button class="btn btn-success m-1" mat-button type="submit" routerLink="/">Back</button>
+            </div>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                        <ng-container matColumnDef="native_word">
+                          <th mat-header-cell *matHeaderCellDef> Native Language </th>
+                          <td mat-cell *matCellDef="let testResult"> {{testResult.native_word}} </td>
+                        </ng-container>
+                      
+                        <ng-container matColumnDef="foreign_word">
+                          <th mat-header-cell *matHeaderCellDef> Foreign Language </th>
+                          <td mat-cell *matCellDef="let testResult"> {{testResult.foreign_word}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="submitted_answer">
+                                <th mat-header-cell *matHeaderCellDef> Submitted Word </th>
+                                <td mat-cell *matCellDef="let testResult"> {{testResult.submitted_answer}} </td>
+                        </ng-container>
+
+                        <ng-container matColumnDef="result">
+                                <th mat-header-cell *matHeaderCellDef> Result </th>
+                                <td mat-cell *matCellDef="let testResult"> 
+                                    <ng-container *ngIf="testResult.result; else wrongTranslation">
+                                        <img src="/assets/img/done.png" />
+                                    </ng-container>
+                                    <ng-template #wrongTranslation>
+                                            <img src="/assets/img/problem.png" />
+                                    </ng-template>
+                                </td>
+                        </ng-container>
+        
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr> 
+                </table>
+        </div>
+</div>

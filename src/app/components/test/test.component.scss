@@ -1,0 +1,36 @@
+.test-component{ 
+    background-image: url(/assets/img/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    .progress-bar-container {
+        min-height: 64px;
+        background: white;
+        margin: 0 auto;
+        position: relative;
+        @media only screen and (max-width:767px){
+            width: 100%;
+        }
+        @media only screen and (min-width:768px){
+            width: 50%;
+        }
+        .question-number{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .mat-progress-bar {
+            top: 64px;
+        }
+    }
+    .question-container{
+        background: white;
+        padding: 10px;
+        width: 50%;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+}
+
+
